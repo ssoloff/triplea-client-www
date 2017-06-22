@@ -35,7 +35,6 @@
     "eslint-plugin-node": "5.0.0",
     "eslint-plugin-promise": "3.5.0",
     "eslint-plugin-standard": "3.0.1",
-    "jest": "20.0.4",
     "jest-cli": "20.0.4",
     "nsp": "2.6.3"
   },
