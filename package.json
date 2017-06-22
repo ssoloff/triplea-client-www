@@ -1,0 +1,57 @@
+{
+  "private": true,
+  "name": "triplea-client-www",
+  "version": "0.0.0",
+  "description": "TripleA web client",
+  "keywords": [
+    ""
+  ],
+  "license": "AGPL-3.0",
+  "homepage": "https://github.com/ssoloff/triplea-client-www",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ssoloff/triplea-client-www.git"
+  },
+  "author": {
+    "name": "Steven Soloff",
+    "email": "steven.soloff@gmail.com",
+    "url": "https://github.com/ssoloff"
+  },
+  "contributors": [],
+  "engines": {
+    "node": ">= 8.1.2",
+    "npm": ">= 5.0.0"
+  },
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "devDependencies": {
+    "coveralls": "2.13.1",
+    "eslint": "4.0.0",
+    "eslint-config-standard": "10.2.1",
+    "eslint-plugin-import": "2.5.0",
+    "eslint-plugin-node": "5.0.0",
+    "eslint-plugin-promise": "3.5.0",
+    "eslint-plugin-standard": "3.0.1",
+    "jest": "20.0.4",
+    "jest-cli": "20.0.4",
+    "nsp": "2.6.3"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "prepublishOnly": "nsp check",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "eslintConfig": {
+    "extends": "standard",
+    "env": {
+      "jest": true,
+      "node": true
+    }
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
