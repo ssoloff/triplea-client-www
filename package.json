@@ -27,8 +27,10 @@
   ],
   "main": "lib/index.js",
   "devDependencies": {
+    "babel-cli": "6.24.1",
     "babel-preset-env": "1.5.2",
     "coveralls": "2.13.1",
+    "del": "3.0.0",
     "eslint": "4.0.0",
     "eslint-config-standard": "10.2.1",
     "eslint-plugin-import": "2.5.0",
@@ -39,16 +41,31 @@
     "nsp": "2.6.3"
   },
   "scripts": {
+    "clean": "babel-node tools/run clean",
     "lint": "eslint .",
     "prepublishOnly": "nsp check",
     "test": "jest",
     "test:coverage": "jest --coverage"
   },
   "eslintConfig": {
-    "extends": "standard",
+    "extends": [
+      "eslint:recommended",
+      "plugin:node/recommended",
+      "standard"
+    ],
     "env": {
       "jest": true,
       "node": true
+    },
+    "rules": {
+      "node/no-unsupported-features": [
+        "error",
+        {
+          "ignores": [
+            "modules"
+          ]
+        }
+      ]
     }
   },
   "jest": {
