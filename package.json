@@ -47,6 +47,7 @@
   },
   "scripts": {
     "clean": "babel-node tools/run clean",
+    "coverage:publish": "babel-node tools/run coverage-publish",
     "lint": "eslint .",
     "prepublishOnly": "nsp check",
     "start": "babel-node src/server.js",

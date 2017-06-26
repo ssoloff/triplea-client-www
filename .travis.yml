@@ -3,4 +3,4 @@ node_js: 8
 script:
   - npm run lint
   - npm run test:coverage
-after_script: 'cat ./.build/coverage/lcov.info | coveralls'
+after_success: npm run coverage:publish
