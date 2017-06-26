@@ -47,27 +47,6 @@
     "test": "jest",
     "test:coverage": "jest --coverage"
   },
-  "eslintConfig": {
-    "extends": [
-      "eslint:recommended",
-      "plugin:node/recommended",
-      "standard"
-    ],
-    "env": {
-      "jest": true,
-      "node": true
-    },
-    "rules": {
-      "node/no-unsupported-features": [
-        "error",
-        {
-          "ignores": [
-            "modules"
-          ]
-        }
-      ]
-    }
-  },
   "jest": {
     "coverageDirectory": ".build/coverage",
     "testEnvironment": "node"
