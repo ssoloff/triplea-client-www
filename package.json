@@ -69,6 +69,7 @@
     }
   },
   "jest": {
+    "coverageDirectory": ".build/coverage",
     "testEnvironment": "node"
   }
 }

@@ -2,7 +2,7 @@
 
 #### `npm run clean` (`clean.js`)
 
-* Cleans up the output `/coverage` folder
+* Cleans up the output `/.build` folder
 
 #### Misc
 
