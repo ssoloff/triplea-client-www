@@ -1,7 +1,8 @@
+import config from './config'
 import del from 'del'
 
 async function clean () {
-  await del(['.build'])
+  await del([config.dirs.build])
 }
 
 export default clean
