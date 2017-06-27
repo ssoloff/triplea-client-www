@@ -54,7 +54,7 @@
     "test:coverage": "jest --coverage"
   },
   "jest": {
-    "collectCoverageFrom": ["src/**"],
+    "collectCoverageFrom": ["src/**/*.js"],
     "coverageDirectory": ".build/coverage",
     "roots": ["src"],
     "testEnvironment": "node"
