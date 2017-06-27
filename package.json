@@ -23,7 +23,6 @@
     "npm": ">= 5.0.0"
   },
   "files": [
-    "lib",
     "src"
   ],
   "main": "src/server.js",
@@ -55,9 +54,9 @@
     "test:coverage": "jest --coverage"
   },
   "jest": {
-    "collectCoverageFrom": ["lib/**", "src/**"],
+    "collectCoverageFrom": ["src/**"],
     "coverageDirectory": ".build/coverage",
-    "roots": ["lib", "src"],
+    "roots": ["src"],
     "testEnvironment": "node"
   }
 }
