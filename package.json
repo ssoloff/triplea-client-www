@@ -27,11 +27,15 @@
   ],
   "main": "src/server.js",
   "dependencies": {
-    "express": "4.15.3"
+    "express": "4.15.3",
+    "react": "15.6.1",
+    "react-dom": "15.6.1"
   },
   "devDependencies": {
     "babel-cli": "6.24.1",
+    "babel-loader": "7.1.1",
     "babel-preset-env": "1.5.2",
+    "babel-preset-react": "6.24.1",
     "coveralls": "2.13.1",
     "del": "3.0.0",
     "eslint": "4.1.1",
@@ -39,22 +43,27 @@
     "eslint-plugin-import": "2.6.0",
     "eslint-plugin-node": "5.1.0",
     "eslint-plugin-promise": "3.5.0",
+    "eslint-plugin-react": "7.1.0",
     "eslint-plugin-standard": "3.0.1",
+    "html-webpack-plugin": "2.29.0",
     "jest-cli": "20.0.4",
-    "nsp": "2.6.3"
+    "nsp": "2.6.3",
+    "webpack": "3.0.0"
   },
   "scripts": {
+    "build:client": "webpack",
+    "build:server": "babel --ignore='src/client,**/__tests__' --out-dir=.build/dist src",
     "clean": "babel-node tools/run clean",
     "coverage:publish": "babel-node tools/run coverage-publish",
-    "lint": "eslint .",
+    "lint": "eslint --ext .js,.jsx .",
     "prepublishOnly": "nsp check",
-    "start": "babel-node src/server.js",
+    "start": "node .build/dist/server.js",
     "test": "jest",
     "test:coverage": "jest --coverage"
   },
   "jest": {
     "collectCoverageFrom": [
-      "src/**/*.js"
+      "src/**/*.{js,jsx}"
     ],
     "coverageDirectory": ".build/coverage",
     "roots": [
