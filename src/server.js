@@ -1,12 +1,10 @@
 import config from './config'
 import express from 'express'
-import httpStatus from 'http-status-codes'
+import path from 'path'
 
 const app = express()
 
-app.get('/', (req, res) => {
-  res.status(httpStatus.OK).send('Welcome to TripleA')
-})
+app.use(express.static(path.join(__dirname, 'public')))
 
 app.listen(config.port, () => {
   console.log(`The server is running at http://localhost:${config.port}/`) // eslint-disable-line no-console

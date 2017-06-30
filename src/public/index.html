@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>TripleA</title>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script src="https://cdn.jsdelivr.net/g/react@15.5.4(react.js+react-dom.js)"></script>
+    <script>
+      const root = React.createElement('div', {},
+        React.createElement('h1', {}, 'TripleA'),
+        React.createElement('p', {},
+          React.createElement('em', {}, 'The World\'s Foremost Open Source Grand Strategy Game')
+        )
+      );
+      const mountTarget = document.getElementById('container');
+      ReactDOM.render(root, mountTarget);
+    </script>
+  </body>
+</html>
