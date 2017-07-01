@@ -25,7 +25,7 @@
   "files": [
     "src"
   ],
-  "main": "src/server.js",
+  "main": ".build/dist/server.js",
   "dependencies": {
     "express": "4.15.3",
     "react": "15.6.1",
@@ -51,8 +51,7 @@
     "webpack": "3.0.0"
   },
   "scripts": {
-    "build:client": "webpack",
-    "build:server": "babel --ignore='src/client,**/__tests__' --out-dir=.build/dist src",
+    "build": "babel-node tools/run build",
     "clean": "babel-node tools/run clean",
     "coverage:publish": "babel-node tools/run coverage-publish",
     "lint": "eslint --ext .js,.jsx .",
