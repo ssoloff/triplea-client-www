@@ -45,6 +45,7 @@
     "eslint-plugin-promise": "3.5.0",
     "eslint-plugin-react": "7.1.0",
     "eslint-plugin-standard": "3.0.1",
+    "fs-extra": "3.0.1",
     "html-webpack-plugin": "2.29.0",
     "jest-cli": "20.0.4",
     "nsp": "2.6.3",

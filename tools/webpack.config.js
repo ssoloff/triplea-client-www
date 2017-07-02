@@ -15,7 +15,7 @@ const clientConfig = {
   },
   output: {
     filename: 'client.js',
-    path: path.resolve(`${config.dirs.dist}/public`)
+    path: path.resolve(config.dirs.publicDist)
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -51,7 +51,7 @@ const serverConfig = {
   output: {
     filename: 'server.js',
     libraryTarget: 'commonjs2',
-    path: path.resolve(config.dirs.dist)
+    path: path.resolve(config.dirs.serverDist)
   },
   target: 'node'
 }
