@@ -27,7 +27,7 @@ const clientConfig = {
 }
 
 const serverConfig = {
-  entry: `${config.dirs.serverSrc}/server.js`,
+  entry: `${config.dirs.serverSrc}/index.js`,
   externals: [
     /^[a-z\-0-9]+$/ // every non-relative module is external
   ],

@@ -9,7 +9,7 @@ export default {
     clientSrc: `${SRC_DIR}/client`,
     coverage: COVERAGE_DIR,
     dist: `${BUILD_DIR}/dist`,
-    serverSrc: SRC_DIR
+    serverSrc: `${SRC_DIR}/server`
   },
   encodings: {
     coverage: {
