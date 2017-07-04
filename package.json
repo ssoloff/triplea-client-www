@@ -52,9 +52,9 @@
     "webpack": "3.0.0"
   },
   "scripts": {
-    "build": "babel-node tools/run build",
-    "clean": "babel-node tools/run clean",
-    "coverage:publish": "babel-node tools/run coverage-publish",
+    "build": "babel-node tools/npm/run build",
+    "clean": "babel-node tools/npm/run clean",
+    "coverage:publish": "babel-node tools/npm/run coverage-publish",
     "lint": "eslint --ext .js,.jsx .",
     "prepublishOnly": "nsp check",
     "start": "node .build/dist/server.js",
