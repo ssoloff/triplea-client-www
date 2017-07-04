@@ -1,0 +1,18 @@
+#
+# Dockerfile for building a TripleA web client image based on the local development environment.
+#
+
+FROM node:8.1
+MAINTAINER steven.soloff@gmail.com
+
+WORKDIR /opt
+ADD . /opt
+
+RUN npm install --quiet \
+  && npm run build \
+  && npm prune --production --quiet \
+  && npm cache clean --force --quiet
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
