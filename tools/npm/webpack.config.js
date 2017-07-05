@@ -19,8 +19,6 @@ const clientConfig = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: 'index.html',
-      inject: 'body',
       template: `${config.dirs.clientSrc}/index.html`
     })
   ]
