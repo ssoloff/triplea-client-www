@@ -37,6 +37,7 @@
     "babel-preset-env": "1.5.2",
     "babel-preset-react": "6.24.1",
     "coveralls": "2.13.1",
+    "css-loader": "0.28.4",
     "del": "3.0.0",
     "eslint": "4.1.1",
     "eslint-config-standard": "10.2.1",
@@ -49,6 +50,7 @@
     "html-webpack-plugin": "2.29.0",
     "jest-cli": "20.0.4",
     "nsp": "2.6.3",
+    "style-loader": "0.18.2",
     "webpack": "3.0.0"
   },
   "scripts": {
