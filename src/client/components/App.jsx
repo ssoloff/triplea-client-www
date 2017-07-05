@@ -4,9 +4,9 @@ import styles from './App.css'
 export default class App extends React.Component {
   render () {
     return (
-      <div className={styles.root}>
+      <div className='container'>
         <h1>TripleA</h1>
-        <p><em>The World&apos;s Foremost Open Source Grand Strategy Game</em></p>
+        <p className={styles.subtitle}>The World&apos;s Foremost Open Source Grand Strategy Game</p>
       </div>
     )
   }

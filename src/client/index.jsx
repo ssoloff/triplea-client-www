@@ -1,4 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.css'
+import './index.global.css'
 
 import App from './components/App.jsx'
 import React from 'react'

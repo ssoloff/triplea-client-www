@@ -7,7 +7,14 @@ const clientConfig = {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.global\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      },
+      {
+        test: /^((?!\.global).)*\.css$/,
         use: [
           {
             loader: 'style-loader'
