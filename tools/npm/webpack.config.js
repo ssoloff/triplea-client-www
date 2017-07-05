@@ -5,11 +5,11 @@ import path from 'path'
 const clientConfig = {
   entry: `${config.dirs.clientSrc}/index.jsx`,
   module: {
-    loaders: [
+    rules: [
       {
+        test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        test: /\.jsx?$/
+        use: 'babel-loader'
       }
     ]
   },
@@ -32,11 +32,11 @@ const serverConfig = {
     /^[a-z\-0-9]+$/ // every non-relative module is external
   ],
   module: {
-    loaders: [
+    rules: [
       {
+        test: /\.js?$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        test: /\.js$/
+        use: 'babel-loader'
       }
     ]
   },
