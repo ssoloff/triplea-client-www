@@ -24,6 +24,19 @@ const clientConfig = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         use: 'babel-loader'
+      },
+      {
+        test: /\.(svg|woff|woff2)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 10000
+          }
+        }
+      },
+      {
+        test: /\.(eot|ttf)$/,
+        use: 'file-loader'
       }
     ]
   },
