@@ -49,7 +49,7 @@ const clientConfig = {
   },
   output: {
     filename: 'client.js',
-    path: path.resolve(config.dirs.publicDist)
+    path: path.resolve(config.dirs.clientDist)
   },
   plugins: [
     new HtmlWebpackPlugin({

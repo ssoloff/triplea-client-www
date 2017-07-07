@@ -7,11 +7,10 @@ const SRC_DIR = './src'
 export default {
   dirs: {
     build: BUILD_DIR,
+    clientDist: `${DIST_DIR}/public`,
     clientSrc: `${SRC_DIR}/client`,
     coverage: COVERAGE_DIR,
     dist: DIST_DIR,
-    publicDist: `${DIST_DIR}/public`,
-    publicSrc: `${SRC_DIR}/public`,
     serverDist: DIST_DIR,
     serverSrc: `${SRC_DIR}/server`
   },
