@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import Home from '../Home/Home'
-import Lobby from '../Lobby/Lobby'
+import Home from '../Home'
+import Lobby from '../Lobby'
 import React from 'react'
 import styles from './App.css'
 
