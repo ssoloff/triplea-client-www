@@ -55,7 +55,10 @@ const clientConfig = {
     new HtmlWebpackPlugin({
       template: `${config.dirs.clientSrc}/index.html`
     })
-  ]
+  ],
+  resolve: {
+    extensions: ['.js', '.jsx', '.json']
+  }
 }
 
 const serverConfig = {
