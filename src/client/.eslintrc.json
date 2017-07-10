@@ -2,15 +2,18 @@
   "root": true,
   "extends": [
     "eslint:recommended",
+    "plugin:flowtype/recommended",
     "plugin:react/recommended",
     "standard"
   ],
+  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
     }
   },
   "plugins": [
+    "flowtype",
     "react"
   ]
 }
