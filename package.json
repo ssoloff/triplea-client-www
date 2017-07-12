@@ -68,17 +68,11 @@
     "lint": "eslint --ext .js,.jsx . && flow",
     "prepublishOnly": "nsp check",
     "start": "node .build/dist/server.js",
-    "test": "jest",
-    "test:coverage": "jest --coverage"
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx}"
-    ],
-    "coverageDirectory": ".build/coverage",
-    "roots": [
-      "src"
-    ],
-    "testEnvironment": "node"
+    "test": "npm run test:client && npm run test:server",
+    "test:client": "jest --rootDir \"$(pwd)\" --config src/client/.jestrc.json",
+    "test:server": "jest --rootDir \"$(pwd)\" --config src/server/.jestrc.json",
+    "test:coverage": "npm run test:coverage:client && npm run test:coverage:server",
+    "test:coverage:client": "jest --rootDir \"$(pwd)\" --config src/client/.jestrc.json --coverage",
+    "test:coverage:server": "jest --rootDir \"$(pwd)\" --config src/server/.jestrc.json --coverage"
   }
 }

@@ -1,0 +1,10 @@
+{
+  "collectCoverageFrom": [
+    "src/client/**/*.{js,jsx}"
+  ],
+  "coverageDirectory": ".build/coverage/client",
+  "roots": [
+    "src/client"
+  ],
+  "testEnvironment": "jsdom"
+}
