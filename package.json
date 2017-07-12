@@ -64,6 +64,7 @@
   "scripts": {
     "build": "babel-node tools/npm/run build",
     "clean": "babel-node tools/npm/run clean",
+    "clean:dist": "babel-node tools/npm/run clean-dist",
     "coverage:publish": "codecov",
     "lint": "eslint --ext .js,.jsx . && flow",
     "prepublishOnly": "nsp check",

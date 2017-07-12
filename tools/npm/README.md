@@ -2,13 +2,17 @@
 
 #### `npm run build` (`build.js`)
 
-* Cleans up the output folder (`clean.js`)
-* Copies static files to the output folder (`copy.js`)
+* Cleans up the distribution folder (`clean-dist.js`)
+* Copies static files to the distribution folder (`copy.js`)
 * Creates application bundles with Webpack (`bundle.js`, `webpack.config.js`)
 
 #### `npm run clean` (`clean.js`)
 
-* Cleans up the output folder
+* Cleans up the entire output folder
+
+#### `npm run clean:dist` (`clean-dist.js`)
+
+* Cleans up the distribution folder
 
 #### Misc
 
