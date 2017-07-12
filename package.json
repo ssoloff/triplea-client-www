@@ -40,7 +40,7 @@
     "babel-plugin-transform-flow-strip-types": "6.22.0",
     "babel-preset-env": "1.6.0",
     "babel-preset-react": "6.24.1",
-    "coveralls": "2.13.1",
+    "codecov": "2.2.0",
     "css-loader": "0.28.4",
     "del": "3.0.0",
     "eslint": "4.1.1",
@@ -64,7 +64,7 @@
   "scripts": {
     "build": "babel-node tools/npm/run build",
     "clean": "babel-node tools/npm/run clean",
-    "coverage:publish": "babel-node tools/npm/run coverage-publish",
+    "coverage:publish": "codecov",
     "lint": "eslint --ext .js,.jsx . && flow",
     "prepublishOnly": "nsp check",
     "start": "node .build/dist/server.js",
