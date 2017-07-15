@@ -7,9 +7,9 @@ import { shallow } from 'enzyme'
 describe('<App />', () => {
   describe('rendering', () => {
     it('should render correctly', () => {
-      const wrapper = shallow(<App />)
-      expect(wrapper.find('h1').text()).toBe('TripleA')
-      expect(wrapper.find('.subtitle').text()).toContain('Open Source')
+      const component = shallow(<App />)
+      expect(component.find('h1').text()).toBe('TripleA')
+      expect(component.find('.subtitle').text()).toContain('Open Source')
     })
   })
 })
