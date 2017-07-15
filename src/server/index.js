@@ -1,6 +1,7 @@
-import config from './config'
 import express from 'express'
 import path from 'path'
+
+import config from './config'
 import sum from './lib/sum'
 
 const app = express()

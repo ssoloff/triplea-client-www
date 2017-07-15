@@ -1,5 +1,6 @@
-import config from './config'
 import del from 'del'
+
+import config from './config'
 
 async function cleanDist () {
   await del([config.dirs.dist])

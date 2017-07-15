@@ -1,8 +1,9 @@
 // @flow
 
-import Home from '..'
 import React from 'react'
 import { shallow } from 'enzyme'
+
+import Home from '..'
 
 describe('<Home />', () => {
   describe('rendering', () => {

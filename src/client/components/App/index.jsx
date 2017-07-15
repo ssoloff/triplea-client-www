@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Route } from 'react-router-dom'
+import React from 'react'
+
 import Home from '../Home'
 import Lobby from '../Lobby'
-import React from 'react'
 import styles from './index.css'
 
 export default function App () {

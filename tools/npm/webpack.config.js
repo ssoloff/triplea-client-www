@@ -1,6 +1,7 @@
-import config from './config'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import path from 'path'
+
+import config from './config'
 
 const clientConfig = {
   entry: `${config.dirs.clientSrc}/index.jsx`,

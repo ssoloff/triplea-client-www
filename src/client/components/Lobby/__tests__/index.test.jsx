@@ -1,8 +1,9 @@
 // @flow
 
-import Lobby from '..'
 import React from 'react'
 import { shallow } from 'enzyme'
+
+import Lobby from '..'
 
 describe('<Lobby />', () => {
   describe('rendering', () => {
