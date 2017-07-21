@@ -1,12 +1,11 @@
-import PropTypes from 'prop-types'
+// @flow
+
 import React from 'react'
 
-export default function User (props) {
+import type { UserProps } from './types'
+
+export default function User (props: UserProps) {
   return (
     <li className='list-group-item'>{props.name}</li>
   )
-}
-
-User.propTypes = {
-  name: PropTypes.string.isRequired
 }

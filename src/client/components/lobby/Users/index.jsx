@@ -1,9 +1,16 @@
-import PropTypes from 'prop-types'
+// @flow
+
 import React from 'react'
 
 import User from '../User'
 
-export default function Users (props) {
+import type { UserProps } from '../User/types'
+
+type UsersProps = {
+  users: UserProps[]
+}
+
+export default function Users (props: UsersProps) {
   return (
     <ul className='list-group'>
       {
@@ -11,8 +18,4 @@ export default function Users (props) {
       }
     </ul>
   )
-}
-
-Users.propTypes = {
-  users: PropTypes.arrayOf(PropTypes.object).isRequired
 }
