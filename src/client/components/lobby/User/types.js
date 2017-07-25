@@ -1,5 +1,7 @@
 // @flow
 
-export type UserProps = {
+export type $User = {
   name: string
 }
+
+export type UserProps = $User

@@ -4,11 +4,7 @@ import React from 'react'
 
 import User from '../User'
 
-import type { UserProps } from '../User/types'
-
-type UsersProps = {
-  users: UserProps[]
-}
+import type { UsersProps } from './types'
 
 export default function Users (props: UsersProps) {
   return (
