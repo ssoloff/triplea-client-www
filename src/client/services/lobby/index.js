@@ -1,6 +1,6 @@
 // @flow
 
-import type { $Users } from '../../components/lobby/Users/types'
+import type { $Users } from '../../model/types'
 
 export default {
   fetchUsers (): Promise<$Users> {

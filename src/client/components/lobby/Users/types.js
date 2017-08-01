@@ -1,8 +1,6 @@
 // @flow
 
-import type { $User } from '../User/types'
-
-export type $Users = $User[]
+import type { $Users } from '../../../model/types'
 
 export type UsersProps = {
   users: $Users

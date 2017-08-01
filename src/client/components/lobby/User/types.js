@@ -1,7 +1,5 @@
 // @flow
 
-export type $User = {
-  name: string
-}
+import type { $User } from '../../../model/types'
 
 export type UserProps = $User
