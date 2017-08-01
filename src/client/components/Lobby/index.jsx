@@ -4,16 +4,18 @@ import { Link } from 'react-router-dom'
 import React from 'react'
 
 import Users from '../lobby/Users'
+import lobbyService from '../../services/lobby'
 
 import styles from './index.css'
 
 export default class Lobby extends React.Component {
   state = {
-    users: [
-      { name: 'user1' },
-      { name: 'user2' },
-      { name: 'user3' }
-    ]
+    users: []
+  }
+
+  componentDidMount () {
+    lobbyService.fetchUsers()
+      .then(users => this.setState({ users }))
   }
 
   render () {
