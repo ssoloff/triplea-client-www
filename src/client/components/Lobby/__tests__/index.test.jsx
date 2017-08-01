@@ -18,9 +18,11 @@ describe('<Lobby />', () => {
 
   describe('mounting', () => {
     it('should mount correctly', () => {
-      jest.spyOn(Lobby.prototype, 'componentDidMount')
+      const spy = jest.spyOn(Lobby.prototype, 'componentDidMount')
       mount(<Router><Lobby /></Router>)
       expect(Lobby.prototype.componentDidMount).toHaveBeenCalled()
+      spy.mockReset()
+      spy.mockRestore()
     })
   })
 })
