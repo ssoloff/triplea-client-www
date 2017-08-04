@@ -1,12 +1,19 @@
 // @flow
 
-import { BrowserRouter as Router } from 'react-router-dom'
-import React from 'react'
 import { mount, shallow } from 'enzyme'
+import createSandbox from 'jest-sandbox'
+import React from 'react'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 import Lobby from '..'
 
 describe('<Lobby />', () => {
+  const sandbox = createSandbox()
+
+  afterEach(() => {
+    sandbox.restore()
+  })
+
   describe('rendering', () => {
     it('should render correctly', () => {
       const component = shallow(<Lobby />)
@@ -18,11 +25,9 @@ describe('<Lobby />', () => {
 
   describe('mounting', () => {
     it('should mount correctly', () => {
-      const spy = jest.spyOn(Lobby.prototype, 'componentDidMount')
+      sandbox.spyOn(Lobby.prototype, 'componentDidMount')
       mount(<Router><Lobby /></Router>)
       expect(Lobby.prototype.componentDidMount).toHaveBeenCalled()
-      spy.mockReset()
-      spy.mockRestore()
     })
   })
 })
