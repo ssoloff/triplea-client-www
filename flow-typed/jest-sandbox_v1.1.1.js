@@ -1,3 +1,5 @@
+// @flow
+
 import type { JestMockFn } from 'jest'
 
 declare class JestSandbox {
@@ -7,7 +9,7 @@ declare class JestSandbox {
   clear(): void;
   reset(): void;
   restore(): void;
-};
+}
 
 declare module 'jest-sandbox' {
   declare module.exports: {
