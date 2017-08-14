@@ -1,21 +1,32 @@
 // @flow
 
-import { Link } from 'react-router-dom'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import Users from '../lobby/Users'
-import lobbyService from '../../services/lobby'
 
 import styles from './index.css'
 
+import type { $Users } from '../../model/types'
+import type { $LobbyService } from '../../services/lobby/types'
+
 export default class Lobby extends React.Component {
-  state = {
-    users: []
+  props: {
+    lobbyService: $LobbyService
+  }
+
+  state: {
+    users: $Users,
+    usersError: ?Error
+  } = {
+    users: [],
+    usersError: null
   }
 
   componentDidMount () {
-    lobbyService.fetchUsers()
-      .then(users => this.setState({ users }))
+    this.props.lobbyService.fetchUsers()
+      .then(users => this.setState({ users, usersError: null }))
+      .catch(err => this.setState({ users: [], usersError: err }))
   }
 
   render () {
@@ -32,7 +43,11 @@ export default class Lobby extends React.Component {
             <p>Return to <Link to='/'>main menu</Link></p>
           </div>
           <div className='col-sm-3'>
-            <Users users={this.state.users} />
+            {
+              this.state.usersError
+                ? <div>Failed: {this.state.usersError.message}</div>
+                : <Users users={this.state.users} />
+            }
           </div>
         </div>
       </div>
